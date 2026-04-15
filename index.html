@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>猜角色挑战 — 选择你的游戏</title>
+<meta property="og:title" content="猜角色挑战">
+<meta property="og:description" content="FGO猜从者 & 宝可梦猜精灵 & QQ炫舞猜套装 — 你能在6次内猜中吗？">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;background:#0a0e1a;color:#e8e8e8;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px}
+h1{font-size:2em;font-weight:800;text-align:center;margin-bottom:8px;background:linear-gradient(90deg,#E3350D,#FFCB05,#3B4CCA,#c9a84c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sub{color:#8899aa;text-align:center;margin-bottom:40px;font-size:.9em}
+.cards{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.card{width:320px;border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,.1);background:#141c32;transition:all .3s;cursor:pointer;text-decoration:none;color:inherit}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.5)}
+.card-img{height:180px;display:flex;align-items:center;justify-content:center;font-size:5em;position:relative;overflow:hidden}
+.card-img.fgo{background:linear-gradient(135deg,#0f1628,#1a2744);border-bottom:3px solid #c9a84c}
+.card-img.pk{background:linear-gradient(135deg,#1a1a2e,#16213e);border-bottom:3px solid #E3350D}
+.card-body{padding:20px}
+.card-title{font-size:1.3em;font-weight:700;margin-bottom:6px}
+.card.fgo-card .card-title{color:#c9a84c}
+.card.pk-card .card-title{color:#FFCB05}
+.card-desc{font-size:.85em;color:#8899aa;line-height:1.6}
+.card-tags{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.tag{padding:3px 10px;border-radius:12px;font-size:.72em;font-weight:500}
+.card.fgo-card .tag{background:rgba(201,168,76,.15);color:#c9a84c;border:1px solid rgba(201,168,76,.3)}
+.card.pk-card .tag{background:rgba(227,53,13,.12);color:#ff9999;border:1px solid rgba(227,53,13,.3)}
+.card.xw-card .card-title{color:#FF69B4}
+.card.xw-card .tag{background:rgba(255,105,180,.12);color:#ffb6d9;border:1px solid rgba(255,105,180,.3)}
+.footer{margin-top:48px;color:#556;font-size:.72em;text-align:center;line-height:1.8}
+.footer a{color:#8899aa;text-decoration:none}
+.footer a:hover{color:#ccc}
+.pokeball-mini{width:28px;height:28px;border-radius:50%;background:linear-gradient(180deg,#E3350D 45%,#fff 45%,#fff 55%,#eee 55%);border:2px solid #fff;display:inline-block;position:relative;vertical-align:middle}
+.pokeball-mini::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:9px;height:9px;border-radius:50%;background:#fff;border:2px solid #888}
+</style>
+</head>
+<body>
+<h1>🎮 猜角色挑战</h1>
+<p class="sub">选择你的战场，6次机会猜出隐藏角色！</p>
+
+<div class="cards">
+  <a class="card fgo-card" href="fgo-guess-servant.html">
+    <div class="card-img fgo">⚔️</div>
+    <div class="card-body">
+      <div class="card-title">御主鉴定 — FGO猜从者</div>
+      <div class="card-desc">猜出隐藏的从者！通过职阶、稀有度、性别、属性、宝具色、特性6个维度推理。</div>
+      <div class="card-tags">
+        <span class="tag">Fate/Grand Order</span>
+        <span class="tag">50+从者</span>
+        <span class="tag">每日挑战</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="card pk-card" href="pokemon-guess.html">
+    <div class="card-img pk"><span class="pokeball-mini" style="width:60px;height:60px;border-width:4px"></span></div>
+    <div class="card-body">
+      <div class="card-title">谁是那只宝可梦？</div>
+      <div class="card-desc">捕获隐藏的宝可梦！通过属性、世代、进化阶段、身高、体重推理锁定目标。</div>
+      <div class="card-tags">
+        <span class="tag">Pokémon</span>
+        <span class="tag">80+精灵</span>
+        <span class="tag">1-9世代</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="card xw-card" href="x5-guess-costume.html">
+    <div class="card-img" style="background:linear-gradient(135deg,#1a0a2e,#2d1b4e);border-bottom:3px solid #FF69B4">💃</div>
+    <div class="card-body">
+      <div class="card-title">猜猜是哪套？— QQ炫舞</div>
+      <div class="card-desc">炫舞老玩家专属挑战！通过套装类型、风格、性别、获取方式、年份、光效推理。</div>
+      <div class="card-tags">
+        <span class="tag">QQ炫舞端游</span>
+        <span class="tag">90+套装</span>
+        <span class="tag">魔法套/光效套</span>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="footer">
+  猜角色挑战 · 灵感来源:
+  <a href="https://www.transfermarkt.co.uk/whoami" target="_blank">Transfermarkt WhoAmI</a> ·
+  <a href="https://xiaoce.fun/" target="_blank">猜盐</a><br>
+  FGO ©TYPE-MOON / FGO PROJECT · Pokémon ©Nintendo/Game Freak · QQ炫舞 ©腾讯游戏
+</div>
+</body>
+</html>
